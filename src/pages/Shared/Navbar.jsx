@@ -30,7 +30,7 @@ const Navbar = () => {
     </li>
   </div>)
   return (
-    <div>
+    <div className="">
       <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
@@ -42,7 +42,7 @@ const Navbar = () => {
       </ul>
     </div>
     <img src={logo} alt="" />
-    <a className="btn btn-ghost normal-case text-xl">Harmony Haven</a>
+    <a className="btn btn-ghost normal-case text-2xl text-primary-focus">Harmony Haven</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
