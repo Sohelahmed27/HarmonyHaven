@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/Yuga -logo.jpg'
 const Navbar = () => {
-  const navOption = (<div className="flex items-center text-xl text-primary">
+  const navOption = (<div className="flex items-center text-xl">
     <li>
       <Link to='/'>Home</Link>
     </li>
@@ -31,18 +31,18 @@ const Navbar = () => {
   </div>)
   return (
     <div className="">
-      <div className="navbar bg-base-100">
+      <div className="navbar fixed z-10 opacity-50 text-white bg-[#090580]">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow  rounded-box w-52">
       {navOption}
       </ul>
     </div>
     <img src={logo} alt="" />
-    <a className="btn btn-ghost normal-case text-2xl text-primary-focus">Harmony Haven</a>
+    <a className="btn btn-ghost normal-case text-2xl ">Harmony Haven</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

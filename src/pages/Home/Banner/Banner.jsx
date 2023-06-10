@@ -8,8 +8,8 @@ import banner5 from '../../../assets/banner/banner5.png'
 
 const Banner = () => {
   return (
-    <Carousel showArrows={true}>
-    <div>
+    <Carousel className="text-center h-2/3">
+    <div >
         <img src={banner1} />
        
     </div>
