@@ -15,7 +15,7 @@ const Navbar = () => {
       <Link to='/'>Inbox</Link>
     </li>
     <li>
-      <Link to='/'>SignIn</Link>
+      <Link to='/login'>SignIn</Link>
     </li>
     <li>
       <Link to='/'>Logout</Link>

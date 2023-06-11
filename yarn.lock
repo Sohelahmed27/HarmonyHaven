@@ -2442,7 +2442,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prop-types@^15.5.8, prop-types@^15.8.1:
+prop-types@^15.5.8, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -2512,6 +2512,18 @@ react-easy-swipe@^0.0.21:
   integrity sha512-OeR2jAxdoqUMHIn/nS9fgreI5hSpgGoL5ezdal4+oO7YSSgJR8ga+PkYGJrSrJ9MKlPcQjMQXnketrD7WNmNsg==
   dependencies:
     prop-types "^15.5.8"
+
+react-google-button@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/react-google-button/-/react-google-button-0.7.2.tgz#5bb2bcb0d54e36da3cd3b712a6fac4f9209b764c"
+  integrity sha512-LPIqU2hIlc212kqks8MtKjRstquVkP3SIjxlK5B1nIfg2R7YqSusJAxZUkJA5dv/z6QeSuGyI9ujwV/VWMTyAA==
+  dependencies:
+    prop-types "^15.7.2"
+
+react-hook-form@^7.44.3:
+  version "7.44.3"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.44.3.tgz#a99e560c6ef2b668db1daaebc4f98267331b6828"
+  integrity sha512-/tHId6p2ViAka1wECMw8FEPn/oz/w226zehHrJyQ1oIzCBNMIJCaj6ZkQcv+MjDxYh9MWR7RQic7Qqwe4a5nkw==
 
 react-is@^16.13.1:
   version "16.13.1"
