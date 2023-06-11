@@ -8,13 +8,13 @@ import banner5 from '../../../assets/banner/banner5.png'
 
 const Banner = () => {
   return (
-    <Carousel className="text-center h-2/3">
-    <div >
-        <img src={banner1} />
+    <Carousel className="text-center ">
+    <div className="h-[700px]">
+        <img src={banner2} />
        
     </div>
     <div>
-        <img src={banner2} />
+        <img src={banner1} />
        
     </div>
     <div>
