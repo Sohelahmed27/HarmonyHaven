@@ -14,7 +14,7 @@ const AboutUs = () => {
             space where individuals can find balance, cultivate inner harmony,
             and enhance their overall well-being.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          {/* <button className="btn btn-primary">Get Started</button> */}
         </div>
       </div>
     </div>
