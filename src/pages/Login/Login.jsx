@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 
 const Login = () => {
   const[error, setError] = useState('')
-  const {signIn}= useContext(AuthContext)
+  const {signIn, }= useContext(AuthContext)
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -34,13 +34,17 @@ const Login = () => {
       setError(error)
     })
   }
+
+  const handleGoogleLogin =()=>{
+
+  }
  
  
   return (
+    
     <div>
-    <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero min-h-screen ">
+        <div className="hero-content flex-col lg:flex-row-reverse mt-10 py-20">
           <div className="text-center lg:text-left">
             <img src={img} className="w-[600px] h-[700px]" />
           </div>
@@ -111,7 +115,7 @@ const Login = () => {
               <div className="text-center w-[400px]">
                 <div className="divider ">or</div>
                 <div className="flex justify-center">
-                  <GoogleButton className=""></GoogleButton>
+                  <GoogleButton onClick={handleGoogleLogin}></GoogleButton>
                 </div>
               </div>
             </div>
@@ -119,7 +123,7 @@ const Login = () => {
         </div>
       </div>
     </div>   
-    </div>
+  
   );
 };
 

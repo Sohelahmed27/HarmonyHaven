@@ -7,11 +7,13 @@ import Instructors from "../pages/Home/Instructors/Instructors";
 import AboutUs from "../pages/Home/About us/AboutUs";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Login/Signup";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element:<Main></Main>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

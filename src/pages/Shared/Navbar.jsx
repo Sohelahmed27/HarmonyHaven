@@ -45,12 +45,11 @@ const Navbar = () => {
       <Link to='/login'>SignIn</Link>
     </li>
     }
-    
-    
-   
   </div>)
+  
+  
   return (
-    <div className="">
+    <div>
       <div className="navbar fixed z-10 opacity-60 text-white font-bold bg-[#090580]">
   <div className="navbar-start">
     <div className="dropdown">
