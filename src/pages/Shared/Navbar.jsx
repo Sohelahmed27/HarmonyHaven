@@ -25,12 +25,21 @@ const Navbar = () => {
       <Link to='/'>Inbox</Link>
     </li>
     {
-      user?
-      
+      user? <>
       <li>
       <Link onClick={handleLogout} >Logout</Link>
       </li>
   
+      
+       <li>
+    <div className="avatar">
+  <div className="w-16 rounded-full">
+    <img src={user.photoURL}/>
+  </div>
+</div>
+    </li></>
+      
+     
      :
     <li>
       <Link to='/login'>SignIn</Link>
@@ -38,17 +47,11 @@ const Navbar = () => {
     }
     
     
-    <li>
-    <div className="avatar">
-  <div className="w-16 rounded-full">
-    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-  </div>
-</div>
-    </li>
+   
   </div>)
   return (
     <div className="">
-      <div className="navbar fixed z-10 opacity-50 text-white bg-[#090580]">
+      <div className="navbar fixed z-10 opacity-60 text-white font-bold bg-[#090580]">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
