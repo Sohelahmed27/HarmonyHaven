@@ -1,6 +1,16 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/Yuga -logo.jpg'
+import { useContext } from 'react';
+import { AuthContext } from '../../provider/AuthProvider';
 const Navbar = () => {
+  const {user,  logOut} = useContext(AuthContext)
+
+  const handleLogout = () => {
+    logOut()
+   .then(() => {})
+   .catch((error) =>console.log(error))
+  }
+
   const navOption = (<div className="flex items-center text-xl">
     <li>
       <Link to='/'>Home</Link>
@@ -14,13 +24,20 @@ const Navbar = () => {
     <li>
       <Link to='/'>Inbox</Link>
     </li>
+    {
+      user?
+      
+      <li>
+      <Link onClick={handleLogout} >Logout</Link>
+      </li>
+  
+     :
     <li>
       <Link to='/login'>SignIn</Link>
     </li>
-    <li>
-      <Link to='/'>Logout</Link>
-  
-    </li>
+    }
+    
+    
     <li>
     <div className="avatar">
   <div className="w-16 rounded-full">

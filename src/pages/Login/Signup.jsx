@@ -7,24 +7,8 @@ import { useForm } from "react-hook-form";
 
 const Signup = () => {
   const {signUp} = useContext(AuthContext)
-  // const handleSignup = event => {
-  //   event.preventDefault();
-  //   const form = event.target;
-  //   const name = form.name.value;
-  //   const email = form.email.value;
-  //   const password = form.password.value;
-  //   const photo = form.photo.value;
-  //   console.log(name, email, password, photo)
 
-  //   signUp(email, password)
-  //   .then(result =>{
-  //     const user = result.user;
-  //     console.log(user)
-  //   })
-
-  // }
-  //REACT HOOK FORM
-  const { register, formState: { errors }, handleSubmit } = useForm();
+const { register, formState: { errors }, handleSubmit } = useForm();
 
 const onSubmit = (data) => {
   signUp(data.email, data.password)
