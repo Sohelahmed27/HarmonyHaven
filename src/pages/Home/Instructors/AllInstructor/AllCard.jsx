@@ -8,12 +8,12 @@ const AllCard = ({mentor}) => {
     <figure><img src= {mentor.instructorImage} className="h-[400px] w-[100%]" /></figure>
     <div className="card-body font-semibold">
       <h1 className="card-title">{mentor.instructor}</h1>
-      <p>Email: {mentor.instructorEmail}</p>
-      <p>Class Taken: {mentor.classTaken}</p>
       <p>Class : {mentor.name}</p>
-      <div className="card-actions justify-end">
-        <button className="btn btn-primary">Buy Now</button>
-      </div>
+      <p>Class Taken: {mentor.classTaken}</p>
+      <p>Email: {mentor.instructorEmail}</p>
+     
+      
+     
     </div>
   </div>
   );
