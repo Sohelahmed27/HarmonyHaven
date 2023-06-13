@@ -1,17 +1,25 @@
 /* eslint-disable react/prop-types */
 import  { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AllClassCard = ({ item }) => {
   const {user} = useContext(AuthContext)
 
   const navigate = useNavigate()
+  const location = useLocation();
 
   const handleSelect = (item) => {
     console.log(item);
+  
+    // Generate a new unique identifier using the name and a random number
+    const uniqueId = `${item.name}-${Math.floor(Math.random() * 1000)}`;
+  
     if (user) {
+      // Update the item object with the new unique _id value
+      item._id = uniqueId;
+  
       fetch('http://localhost:5000/carts', {
         method: 'POST',
         headers: {
@@ -25,7 +33,7 @@ const AllClassCard = ({ item }) => {
             Swal.fire({
               position: 'top-end',
               icon: 'success',
-              title: 'Your Cart has been selected',
+              title: 'Your work has been saved',
               showConfirmButton: false,
               timer: 1500,
             });
@@ -52,21 +60,16 @@ const AllClassCard = ({ item }) => {
     } else {
       // Handle case when user is not logged in
       Swal.fire({
-        title: 'Login first to select the course',
-       
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Please Login!'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          navigate('/login')
-        }
-      })
-
+        position: 'top-end',
+        icon: 'info',
+        title: 'Please log in before selecting the course',
+        showConfirmButton: false,
+        timer: 1500,
+        
+      });
     }
-  }
+  };
+  
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
