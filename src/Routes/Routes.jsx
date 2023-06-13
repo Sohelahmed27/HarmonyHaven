@@ -8,6 +8,8 @@ import AboutUs from "../pages/Home/About us/AboutUs";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Login/Signup";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import ProvidedClasses from "../pages/Home/ProvidedClasses/ProvidedClasses";
+import AllInstructor from "../pages/Home/Instructors/AllInstructor/AllInstructor";
 
 export const router = createBrowserRouter([
   {
@@ -19,9 +21,14 @@ export const router = createBrowserRouter([
         path: "/",
         element:<Home></Home>
       },
+
       {
        path: "/instructors",
-       element:<Instructors></Instructors>
+       element:<AllInstructor></AllInstructor>
+      },
+      {
+        path:'/providedClass',
+        element:<ProvidedClasses></ProvidedClasses>
       },
       {
        path: "/about",

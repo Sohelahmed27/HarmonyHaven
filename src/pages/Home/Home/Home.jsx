@@ -1,13 +1,18 @@
 import AboutUs from "../About us/AboutUs";
 import Banner from "../Banner/Banner";
-import Classes from "../Classes/Classes";
+
+import Gallary from "../Gallary/Gallary";
+import PopularInstructor from "../PopularInstructor/PopularInstructor";
+import ProvidedClasses from "../ProvidedClasses/ProvidedClasses";
 
 const Home = () => {
   return (
     <div>
       <Banner></Banner>
       <AboutUs></AboutUs>
-      <Classes></Classes>
+      <ProvidedClasses></ProvidedClasses>
+      <Gallary></Gallary>
+      <PopularInstructor></PopularInstructor>
 
     </div>
   );

@@ -8,7 +8,7 @@ const AboutUs = () => {
         <img src={img} className="w-[400px] h-[400px]"/>
         <div className="w-[50%]">
           <h1 className="text-5xl font-bold">About us!</h1>
-          <p className="py-6 px-4 textBox">
+          <p className="py-6 px-4  mr-20 text-xl">
             Welcome to Harmony Haven, your sanctuary for yoga and meditation. At
             Harmony Haven, we are dedicated to creating a peaceful and nurturing
             space where individuals can find balance, cultivate inner harmony,
