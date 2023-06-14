@@ -6,7 +6,7 @@ const MyCart = () => {
   
   const handleDelete = async (itemId) => {
     try {
-      const response = await fetch(`http://localhost:5000/carts/${itemId}`, {
+      const response = await fetch(`https://harmony-haven-server.vercel.app/carts/${itemId}`, {
         method: 'DELETE',
       });
       if (response.ok) {

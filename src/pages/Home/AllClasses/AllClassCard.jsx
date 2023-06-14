@@ -9,18 +9,14 @@ const AllClassCard = ({ item }) => {
   const { name, price, totalSeats, instructor } = item;
   console.log(item);
   const { user } = useContext(AuthContext);
-  const [, refetch] = useCart()
-
- 
+  const [, refetch] = useCart();
 
   const handleSelect = (item) => {
     console.log(item);
 
-    
     const uniqueId = `${item.name}-${Math.floor(Math.random() * 1000)}`;
 
     if (user && user.email) {
-  
       item._id = uniqueId;
       const cartItem = {
         uniqueId,
@@ -30,7 +26,7 @@ const AllClassCard = ({ item }) => {
         instructor,
         email: user.email,
       };
-      fetch("http://localhost:5000/carts", {
+      fetch("https://harmony-haven-server.vercel.app/carts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
