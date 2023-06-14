@@ -8,7 +8,7 @@ const AllInstructor = () => {
     fetch('http://localhost:5000/allClasses')
     .then((response)=>response.json())
     .then(data =>setMentors(data))
-  })
+  }, [])
   return (
    <div className="mx-auto">
      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

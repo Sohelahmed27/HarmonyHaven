@@ -9,7 +9,7 @@ const PopularInstructor = () => {
     fetch('http://localhost:5000/classes')
     .then((response) => response.json())
     .then(data =>setClasses(data))
-  })
+  }, [])
   return (
     <div className="container mt-40 mb-40">
     <h1 className="text-5xl font-bold text-center  mb-20">Our Popular Instructors</h1>
