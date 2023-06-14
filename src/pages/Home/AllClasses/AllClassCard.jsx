@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
-import { useLocation, useNavigate } from "react-router-dom";
+
 import Swal from "sweetalert2";
 import useCart from "../../../Hooks/useCart";
 
@@ -11,17 +11,16 @@ const AllClassCard = ({ item }) => {
   const { user } = useContext(AuthContext);
   const [, refetch] = useCart()
 
-  // const navigate = useNavigate();
-  // const location = useLocation();
+ 
 
   const handleSelect = (item) => {
     console.log(item);
 
-    // Generate a new unique identifier using the name and a random number
+    
     const uniqueId = `${item.name}-${Math.floor(Math.random() * 1000)}`;
 
     if (user && user.email) {
-      // Update the item object with the new unique _id value
+  
       item._id = uniqueId;
       const cartItem = {
         uniqueId,
