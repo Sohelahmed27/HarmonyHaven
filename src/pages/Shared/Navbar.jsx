@@ -3,9 +3,10 @@ import logo from '../../assets/Yuga -logo.jpg'
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import useCart from '../../Hooks/useCart';
+
 const Navbar = () => {
   const {user,  logOut} = useContext(AuthContext)
-  const [carts] = useCart()
+  const [carts] =useCart()
 
   const handleLogout = () => {
     logOut()
@@ -24,7 +25,7 @@ const Navbar = () => {
       <Link to='/allClasses'>Classes</Link>
     </li>
     <li>
-      <Link to='/'><button className="btn">
+      <Link to='/dashboard/myCart'><button className="btn">
   Inbox
   <div className="badge badge-secondary">{carts?.length || 0}</div>
 </button></Link>
