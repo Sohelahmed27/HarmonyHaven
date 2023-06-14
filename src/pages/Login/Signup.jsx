@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 
 const Signup = () => {
   const navigate = useNavigate();
-  const { signUp, updateUserProfile } = useContext(AuthContext);
+  const { signUp, updateUserProfile, signInWithGoogle } = useContext(AuthContext);
 
   const {
     register,
@@ -45,7 +45,24 @@ const Signup = () => {
         })
         .catch((err) => console.log(err));
     });
+
+   
   };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+    .then((result) => {
+      const user = result.user;
+      console.log(user);
+      navigate("/");      
+    })
+    .catch((error) => {    
+      console.log(error);
+    });
+  } 
+
+
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-200 h-[1000px]">
@@ -172,7 +189,7 @@ const Signup = () => {
               <div className="text-center w-[400px]">
                 <div className="divider ">or</div>
                 <div className="flex justify-center">
-                  <GoogleButton className=""></GoogleButton>
+                  <GoogleButton onClick={handleGoogleSignIn} className=""></GoogleButton>
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { FaBookOpen, FaBookReader, FaShoppingCart } from "react-icons/fa";
+import { FaBookOpen, FaBookReader, FaHome, FaMoneyBillAlt, FaRegEdit, FaUserTie } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 
@@ -11,14 +11,23 @@ const Dashboard = () => {
     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
   
   </div> 
-  <div className="drawer-side">
+  <div className="drawer-side  text-white bg-[#090580]">
     <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-    <ul className="menu p-4 w-80 h-full text-lg  text-white bg-[black]">
+    <ul className="menu p-4 w-80 h-full text-lg ">
       {/* Sidebar content here */}
+      <li><Link><FaHome></FaHome>Student Home</Link></li>
+      <li><Link><FaMoneyBillAlt></FaMoneyBillAlt>Payment History</Link></li>
       <li><a><FaBookReader></FaBookReader>Selected Classes</a></li>
       <li><Link to='/'><FaBookOpen></FaBookOpen>Enrolled Classes</Link></li>
-      <li><a>Sidebar Item 2</a></li>
-    </ul>
+      {/* </ul> */}
+      <div className='divider bg-slate-200'></div>
+      {/* <ul className="menu p-4 w-80 h-full text-lg "> */}
+      <li><Link to='/'><FaHome></FaHome>Home</Link></li>
+      <li><Link to='/instructors'><FaUserTie></FaUserTie>Instructors</Link></li>
+      <li><Link to='/allClasses'><FaRegEdit></FaRegEdit>Classes</Link></li>
+      </ul>
+      
+    
   
   </div>
 </div>

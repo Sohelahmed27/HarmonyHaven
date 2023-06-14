@@ -9,9 +9,10 @@ import Swal from 'sweetalert2';
 
 const Login = () => {
   const[error, setError] = useState('')
-  const {signIn, }= useContext(AuthContext)
+  const {signIn, signInWithGoogle }= useContext(AuthContext)
   const navigate = useNavigate();
   const location = useLocation();
+  
 
   const from = location.state?.from?.pathname || "/";
 
@@ -35,9 +36,17 @@ const Login = () => {
     })
   }
 
-  const handleGoogleLogin =()=>{
-
-  }
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+    .then((result) => {
+      const user = result.user;
+      console.log(user);
+      navigate(from, { replace: true });    
+    })
+    .catch((error) => {    
+      console.log(error);
+    });
+  } 
  
  
   return (
@@ -115,7 +124,7 @@ const Login = () => {
               <div className="text-center w-[400px]">
                 <div className="divider ">or</div>
                 <div className="flex justify-center">
-                  <GoogleButton onClick={handleGoogleLogin}></GoogleButton>
+                  <GoogleButton onClick={handleGoogleSignIn}></GoogleButton>
                 </div>
               </div>
             </div>
